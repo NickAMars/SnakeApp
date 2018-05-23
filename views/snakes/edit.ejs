@@ -1,0 +1,30 @@
+
+<% include ../partials/header%>
+<div class="container" style= "margin-top: 40px">
+    <h1 style= "text-align: center; margin-bottom: 25px;">Edit <%= snake.name%></h1>
+    <div class="row">
+        <div style = "width: 30%; margin: 0 auto;">
+          <form action="/snakes/<%=snake._id%>?_method=PUT" method="POST">
+            <div class="form-group">
+              <input class = "form-control" type="text"
+               name= "snake[name]" value="<%=snake.name%>">
+            </div>
+            <div class="form-group">
+              <input  class = "form-control" type="text"
+              name= "snake[image]" value="<%=snake.image%>">
+            </div>
+            <div class="form-group">
+              <textarea  class = "form-control" name="snake[description]"
+               rows="10" cols="100"> <%=snake.description%> </textarea>
+            </div>
+            <div class="form-group">
+              <button class = "btn btn-lg btn-default btn-block">Submit</button>
+            </div>
+          </form>
+          <a href="/snakes">Go Back</a>
+        </div>
+     </div>
+</div>
+
+
+<% include ../partials/footer%>
