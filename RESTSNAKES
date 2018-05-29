@@ -1,0 +1,20 @@
+RESTFUL ROUTES
+Snakes
+name         url                verb                      description                                    Mongodb
+======================================================================================================================================================================
+INDEX      /snakes         	    GET             Display a list of all snakes              		          	Project.find()
+NEW        /snakes/:id      	  GET             Displays form to make a new snake	             	          Show Form
+CREATE     /snakes         	    POST            Add new snake to DB 					                            Project.create()
+SHOW       /snakes/:id    	    GET             Shows info about one snake 				                        Project.findById()
+Edit       /snakes/:id/edit     GET             Show edit form for one snake				                    	Project.findById()
+Update     /snakes/:id          PUT             Update a particular snake, then redirect somewhere  		  Project.findByIdAndUpdate()
+Destroy    /snakes/:id          DELETE          Delete a particular snake, then redirect somewhere		    Project.findByIdAndRemove()
+
+Comments
+name         url                                         verb                      description                              Mongodb
+================================================================================================================================================================================
+NEW        /snakes/:id/comments/new      	                GET             Displays form to make a new snake	             	Show Form
+CREATE     /snakes/:id/comments         	                POST            Add new snake to DB 					                  Project.create()
+EDIT       /snakes/:id/comments/:comment_id/edit          GET             Show edit form                                  Project.findById()
+PUT        /snakes/:id/comments/:comment_id               PUT             Update a comment
+Destroy
